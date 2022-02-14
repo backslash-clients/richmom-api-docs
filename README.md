@@ -1,8 +1,8 @@
 # Label API - Domestic (US Only)
 
-**Production URI**: https://api.wearerichmom.com
+**Production URI**: https://www.wearerichmom.com
 
-**Endpoint**: /v1/dhlec/label
+**Endpoint**: /api/v1/dhlec/label
 
 ## Create a Label
 
