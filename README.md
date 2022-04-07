@@ -32,11 +32,13 @@
         },
         packageContent: {
             "contentDetail": [
-                "description": "Shirt",
-                "quantity": 1,
-                "price": 10,
-                "hsCode": "61091000",
-                "origin": "TH",
+                {
+                    "description": "Shirt",
+                    "quantity": 1,
+                    "price": 10,
+                    "hsCode": "61091000",
+                    "origin": "TH"
+                }
             ],
             "currency": "USD",
             "category": "G"
