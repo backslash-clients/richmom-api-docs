@@ -30,6 +30,17 @@
             "email": "user@email.com",
             "phone": "123-456–7890"
         },
+        packageContent: {
+            "contentDetail": [
+                "description": "Shirt",
+                "quantity": 1,
+                "price": 10,
+                "hsCode": "61091000",
+                "origin": "TH",
+            ],
+            "currency": "USD",
+            "category": "G"
+        },
         "test": true
     }
 
@@ -48,7 +59,7 @@
     
     totalWeight: Package Weight in grams (g)
         Requirement: Mandatory
-        Data Type: integer or float
+        Data Type: Integer or Float
         Valid Data: Any Numeral 
         Example: e.g. 200, 120.50, etc
     
@@ -102,6 +113,58 @@
         Requirement: Mandatory
         Data Type: String
         Valid Data: Any
+    
+    packageContent.contentDetail:
+        Requirement: Mandatory
+        Data Type: Array
+        Min Item in Array: 1
+        Max Items in Array: 4
+
+    packageContent.contentDetail.description:
+        Requirement: Mandatory
+        Data Type: String
+        Max Length: 30
+        Valid Data: Any
+
+    packageContent.contentDetail.quantity:
+        Requirement: Mandatory
+        Data Type: Integer
+        Valid Data: Any Integer
+
+    packageContent.contentDetail.price:
+        Requirement: Mandatory
+        Data Type: Integer or Float
+
+    packageContent.contentDetail.hsCode:
+        Requirement: Optinal but Recommended
+        Data Type: String
+        Valid Data: Valid HS Code
+
+    packageContent.contentDetail.origin:
+        Requirement: Optional but Recommended
+        Data Type: String
+        Valid Data: Two-Letter Country Code, US Only
+        Max Length: 2
+        Default: US
+
+    packageContent.currency:
+        Requirement: Mandatory
+        Data Type: String
+        Valid Data: Three-Letter Currency Code, US Only
+        Max Length: 3
+        Default: USD
+
+    packageContent.category:
+        Requirement: Mandatory
+        Data Type: String
+        Valid Data: G|D|S|R|M|O
+        Definition:
+            G: Gift
+            D: Document
+            S: Commercial Sample
+            R: Returned Goods
+            M: Merchandise
+            O: Other
 
     test: use this to add 'TEST' as a prefix in packageId, 
         so it's not included when manifesting the packages
